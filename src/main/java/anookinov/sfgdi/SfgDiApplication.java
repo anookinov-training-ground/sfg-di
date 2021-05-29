@@ -1,9 +1,6 @@
 package anookinov.sfgdi;
 
-import anookinov.sfgdi.controllers.ConstructorInjectedController;
-import anookinov.sfgdi.controllers.MyController;
-import anookinov.sfgdi.controllers.PropertyInjectedController;
-import anookinov.sfgdi.controllers.SetterInjectedController;
+import anookinov.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -12,8 +9,10 @@ import org.springframework.context.ApplicationContext;
 public class SfgDiApplication {
 
 	public static void main(String[] args) {
-
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 		MyController myController = (MyController) ctx.getBean("myController");
 

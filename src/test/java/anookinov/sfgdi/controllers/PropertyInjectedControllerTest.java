@@ -1,6 +1,6 @@
 package anookinov.sfgdi.controllers;
 
-import anookinov.sfgdi.services.ConstructorGreetingService;
+import anookinov.sfgdi.services.ConstructorInjectedGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ class PropertyInjectedControllerTest {
     void setUp() {
         controller = new PropertyInjectedController();
 
-        controller.greetingService = new ConstructorGreetingService();
+        controller.greetingService = new ConstructorInjectedGreetingService();
     }
 
     @Test

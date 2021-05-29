@@ -1,6 +1,6 @@
 package anookinov.sfgdi.controllers;
 
-import anookinov.sfgdi.services.ConstructorGreetingService;
+import anookinov.sfgdi.services.ConstructorInjectedGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class SetterInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectedController();
-        controller.setGreetingService(new ConstructorGreetingService());
+        controller.setGreetingService(new ConstructorInjectedGreetingService());
     }
 
     @Test
